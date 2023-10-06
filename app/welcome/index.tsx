@@ -5,29 +5,35 @@ import { Link } from "expo-router";
 
 export default function TabOneScreen() {
   return (
-    <SafeAreaView>
-      <View>
-        <Image
-          style={styles.logo}
-          source={require("../../assets/images/little-lemon-logo.png")}
-        />
-        <Text style={styles.textStyle}>
-          Little Lemon, your local Mediterranean Bistro
-        </Text>
-        <Link href="/subscribe">
-          <Pressable>
-            <Text style={styles.buttonStyle}>Newsletter</Text>
-          </Pressable>
-        </Link>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Image
+        style={styles.logo}
+        source={require("../../assets/images/little-lemon-logo.png")}
+      />
+      <Text style={styles.textStyle}>
+        Little Lemon, your local Mediterranean Bistro
+      </Text>
+      <Link style={styles.flexstyle} href="/subscribe">
+        <Pressable>
+          <Text style={styles.buttonStyle}>Newsletter</Text>
+        </Pressable>
+      </Link>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: 600,
+  },
+  flexstyle: {
+    display: "flex",
+    justifyContent: "center",
+  },
   logo: {
-    marginTop: 150,
-    marginLeft: 100,
     height: 200,
     width: 200,
     resizeMode: "contain",
@@ -36,7 +42,7 @@ const styles = StyleSheet.create({
     marginTop: 90,
     marginLeft: 80,
     marginRight: 80,
-    marginBottom: 150,
+    marginBottom: 20,
     fontSize: 19,
     fontWeight: "bold",
     textAlign: "center",

@@ -42,12 +42,12 @@ export default function TabTwoScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: 25,
-    marginRight: 25,
+    height: 600,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   logo: {
-    marginTop: 40,
-    marginLeft: 75,
     height: 120,
     width: 200,
     resizeMode: "contain",
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     marginBottom: 30,
     fontSize: 19,
     textAlign: "center",
+    width: 300,
   },
   inputStyle: {
     color: "white",
@@ -65,8 +66,8 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 1,
     height: 40,
+    width: 300,
     borderRadius: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingHorizontal: 10,
   },
 });
